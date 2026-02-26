@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  --ink: #1a1208;
+  --text-color: rgba(26, 18, 8, 0.55);
+  --cream: #faf6ef;
+  --paper: #f3ede2;
+  --amber: #e8780c;
+  --amber-light: #f5a843;
+  --amber-pale: #fef0d8;
+  --green: #2d6a4f;
+  --green-light: #52b788;
+  --red: #c1121f;
+  --red-light: #ff6b6b;
+  --yellow: #f4a261;
+  --border: rgba(26, 18, 8, 0.12);
+  --shadow: 0 2px 16px rgba(26, 18, 8, 0.08);
+  --shadow-lg: 0 8px 40px rgba(26, 18, 8, 0.14);
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+.jetbrains-mono {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* fadeup animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.6s var(--delay, 0s) ease both;
+}
