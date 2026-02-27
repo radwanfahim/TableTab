@@ -1,0 +1,103 @@
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) rotate(120deg) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg) scale(0.97);
+  }
+}
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(-35px, 25px) rotate(-90deg) scale(1.08);
+  }
+  66% {
+    transform: translate(20px, -30px) rotate(-200deg) scale(0.95);
+  }
+}
+@keyframes floatC {
+  0%,
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(15px, -20px) scale(1.06);
+  }
+}
+@keyframes driftDot {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-18px);
+    opacity: 1;
+  }
+}
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.shape-a {
+  animation: floatA 18s ease-in-out infinite;
+}
+.shape-b {
+  animation: floatB 22s ease-in-out infinite;
+}
+.shape-c {
+  animation: floatC 14s ease-in-out infinite;
+}
+.spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+.spin-rev {
+  animation: spinReverse 30s linear infinite;
+}
+.shimmer {
+  animation: shimmer 6s ease-in-out infinite;
+}
+.dot-1 {
+  animation: driftDot 4s ease-in-out infinite;
+}
+.dot-2 {
+  animation: driftDot 5.5s ease-in-out infinite 0.8s;
+}
+.dot-3 {
+  animation: driftDot 3.8s ease-in-out infinite 1.6s;
+}
+.dot-4 {
+  animation: driftDot 6s ease-in-out infinite 0.4s;
+}
+.dot-5 {
+  animation: driftDot 4.5s ease-in-out infinite 2s;
+}

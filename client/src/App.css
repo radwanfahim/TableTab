@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 :root {
   --ink: #1a1208;
@@ -16,6 +17,7 @@
   --border: rgba(26, 18, 8, 0.12);
   --shadow: 0 2px 16px rgba(26, 18, 8, 0.08);
   --shadow-lg: 0 8px 40px rgba(26, 18, 8, 0.14);
+  --button-hover: #d4690a;
 }
 
 body {
@@ -40,6 +42,10 @@ body {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* fadeup animation */
