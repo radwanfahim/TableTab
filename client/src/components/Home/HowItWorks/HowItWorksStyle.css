@@ -67,9 +67,9 @@
   }
 }
 
-/* embla__viewport */
+/* embla */
 .embla {
-  --slide-size: 40%;
+  --slide-size: 70%;
   --slide-spacing: 10px;
 }
 
@@ -80,6 +80,7 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1); /* Renders -10px */
 }
 
 .embla__slide {

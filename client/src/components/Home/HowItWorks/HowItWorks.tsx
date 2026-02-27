@@ -1,20 +1,20 @@
-import Autoplay from "embla-carousel-autoplay";
 import StepsCard from "../../../ui/StepsCard";
 import HomeBgBreathingAnimation from "../../Shared/HomeBgBreathingAnimation";
 import "./HowItWorksStyle.css";
-import useEmblaCarousel from "embla-carousel-solid";
 import Setting from "../../../svg/Setting";
 import { For } from "solid-js";
+import useEmblaCarousel from "embla-carousel-solid";
+import Autoplay from "embla-carousel-autoplay";
+import Page from "../../../svg/Page";
+import PhoneQr from "../../../svg/PhoneQr";
+import DesktopComputer from "../../../svg/DesktopComputer";
+import SaleDataBar from "../../../svg/SaleDataBar";
 
 const HowItWorks = () => {
   const [emblaRef] = useEmblaCarousel(
-    () => ({
-      align: "center",
-      loop: true,
-    }),
-    () => [Autoplay({ delay: 5000 })],
+    () => ({ loop: true, align: "center", skipSnaps: false }),
+    () => [Autoplay({ delay: 3000 })],
   );
-
   const setupCards = [
     {
       stepNumber: "01",
@@ -26,7 +26,7 @@ const HowItWorks = () => {
     },
     {
       stepNumber: "02",
-      icon: "",
+      icon: Page,
       who: "TableTab",
       title: "QR codes generated",
       description:
@@ -34,7 +34,7 @@ const HowItWorks = () => {
     },
     {
       stepNumber: "03",
-      icon: "",
+      icon: PhoneQr,
       who: "Customer",
       title: "Scan & order",
       description:
@@ -42,15 +42,15 @@ const HowItWorks = () => {
     },
     {
       stepNumber: "04",
-      icon: "",
+      icon: <DesktopComputer />,
       who: "Kitchen",
       title: "Order appears live",
       description:
         "Instant notification on your kitchen display. Any tablet or old laptop works in Chrome.",
     },
     {
-      stepNumber: "02",
-      icon: "",
+      stepNumber: "05",
+      icon: <SaleDataBar />,
       who: "Owner",
       title: "See your sales data",
       description:
@@ -59,11 +59,11 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div class="bg-(--ink) py-85 relative overflow-hidden">
+    <div class="bg-(--ink) relative py-30 overflow-hidden">
       <HomeBgBreathingAnimation />
       {/* container */}
       <div class="container mx-auto max-w-5xl px-4 sm:px-6">
-        <div class="absolute z-10 top-20">
+        <div class="">
           {/* text */}
           <div data-aos="zoom-out-up" data-aos-duration="1500">
             <h1 class="text-(--amber) text-[14px] uppercase jetbrains-mono">
@@ -75,20 +75,16 @@ const HowItWorks = () => {
           </div>
 
           {/* card */}
-          <div class="mt-10 w-[80%]">
+          <div class="mt-10 w-full" data-aos="fade-up" data-aos-duration="2500">
             <div class="embla">
               <div class="embla__viewport" ref={emblaRef}>
-                <div
-                  class="embla__container"
-                  data-aos="fade-up"
-                  data-aos-duration="2500"
-                >
+                <div class="embla__container">
                   <For each={setupCards}>
                     {(card) => (
                       <div class="embla__slide">
                         <StepsCard
                           card={card}
-                          style="bg-[rgba(255,255,255,0.04)] border-[rgba(255,255,255,0.1)] hover:bg-[rgba(220,97,97,0.06)] hover:border-[rgba(232,120,12,0.3)] h-[18em]"
+                          style="bg-[rgba(255,255,255,0.04)] border-[rgba(255,255,255,0.1)] hover:bg-[rgba(220,97,97,0.06)] hover:border-[rgba(232,120,12,0.3)] h-[18em] w-[100%]"
                         />
                       </div>
                     )}

@@ -1,5 +1,3 @@
-import Setting from "../svg/Setting";
-
 const StepsCard = (props: any) => {
   return (
     <div
@@ -9,7 +7,7 @@ const StepsCard = (props: any) => {
         {props.card.stepNumber}
       </h1>
       <div class="w-10 h-10 flex items-center justify-center my-5">
-        <Setting />
+        {props.card.icon && <props.card.icon />}
       </div>
       <h1 class="text-(--amber) jetbrains-mono text-xs mb-1 uppercase">
         {props.card.who}
