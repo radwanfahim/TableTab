@@ -1,9 +1,13 @@
 import Button from "../../ui/Button";
-import { MoveRight } from "lucide-solid";
+import { Check, MoveRight } from "lucide-solid";
 import { For } from "solid-js";
 import Divider from "../../ui/Divider";
 import Badge from "../../ui/Badge";
 import "./Style.css";
+import FloatingRotatedSquareBottomLeft from "../../svg/FloatingRotatedSquareBottomLeft";
+import Diamond from "../../svg/Diamond";
+import SmallCircle from "../../svg/SmallCircle";
+import PlateForkKnife from "../../svg/PlateForkKnife";
 
 const Header = () => {
   const btnData = {
@@ -72,14 +76,7 @@ const Header = () => {
 
       {/* Floating triangle — top right */}
       <div class="absolute top-16 right-24 shape-c shimmer" style="z-index:0;">
-        <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-          <polygon
-            points="45,4 86,82 4,82"
-            stroke="rgba(232,120,12,0.3)"
-            stroke-width="1.2"
-            fill="rgba(232,120,12,0.05)"
-          />
-        </svg>
+        <PlateForkKnife />
       </div>
 
       {/* Floating rotated square — bottom left */}
@@ -87,19 +84,7 @@ const Header = () => {
         class="absolute bottom-24 left-20 shape-b shimmer"
         style="z-index:0; animation-delay:-3s;"
       >
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
-          <rect
-            x="5"
-            y="5"
-            width="60"
-            height="60"
-            rx="6"
-            stroke="rgba(232,120,12,0.28)"
-            stroke-width="1.2"
-            fill="rgba(232,120,12,0.04)"
-            transform="rotate(15 35 35)"
-          />
-        </svg>
+        <FloatingRotatedSquareBottomLeft />
       </div>
 
       {/* Diamond — mid left */}
@@ -107,19 +92,7 @@ const Header = () => {
         class="absolute top-1/2 left-12 -translate-y-1/2 shape-a shimmer"
         style="z-index:0; animation-delay:-4s;"
       >
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <rect
-            x="3"
-            y="3"
-            width="38"
-            height="38"
-            rx="3"
-            stroke="rgba(232,120,12,0.35)"
-            stroke-width="1.2"
-            fill="none"
-            transform="rotate(45 22 22)"
-          />
-        </svg>
+        <Diamond />
       </div>
 
       {/* Diamond — mid right */}
@@ -127,19 +100,7 @@ const Header = () => {
         class="absolute top-1/3 right-16 shape-c shimmer"
         style="z-index:0; animation-delay:-7s;"
       >
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <rect
-            x="2"
-            y="2"
-            width="32"
-            height="32"
-            rx="2"
-            stroke="rgba(232,120,12,0.28)"
-            stroke-width="1"
-            fill="none"
-            transform="rotate(45 18 18)"
-          />
-        </svg>
+        <Diamond />
       </div>
 
       {/* Small circle outline — top center-left */}
@@ -147,15 +108,7 @@ const Header = () => {
         class="absolute top-28 left-[22%] shape-c shimmer"
         style="z-index:0; animation-delay:-2s;"
       >
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-          <circle
-            cx="14"
-            cy="14"
-            r="12"
-            stroke="rgba(232,120,12,0.25)"
-            stroke-width="1"
-          />
-        </svg>
+        <SmallCircle />
       </div>
 
       {/* Small circle outline — bottom center-right */}
@@ -163,16 +116,7 @@ const Header = () => {
         class="absolute bottom-32 right-[22%] shape-a shimmer"
         style="z-index:0; animation-delay:-9s;"
       >
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <circle
-            cx="11"
-            cy="11"
-            r="9"
-            stroke="rgba(232,120,12,0.22)"
-            stroke-width="1"
-            stroke-dasharray="3 3"
-          />
-        </svg>
+        <SmallCircle />
       </div>
 
       {/* Dot cluster — left */}
@@ -224,15 +168,19 @@ const Header = () => {
         class="relative container mx-auto max-w-5xl px-4 sm:px-6 text-center"
         style="z-index:1;"
       >
-        {/* Badge */}
+        {/* ANCHOR Badge */}
         <div class="mb-8 animate-fadeUp" style="--delay:0s">
-          <Badge />
+          <Badge
+            text="Now open for early access"
+            style="bg-(--amber-pale) border border-(--amber-light) text-(--text-color) inline-flex"
+            spanStyle="bg-(--amber)"
+          />
         </div>
 
         {/* Title */}
         <h1
-          class="text-7xl sm:text-8xl font-bold tracking-tight dm-serif-display-regular animate-fadeUp"
-          style="--delay:0.1s; color:#1a1410;"
+          class="text-7xl sm:text-8xl font-bold tracking-tight dm-serif-display-regular animate-fadeUp text-(--ink)"
+          style="--delay:0.1s; "
         >
           <span>Table</span>
           <span
@@ -245,16 +193,16 @@ const Header = () => {
 
         {/* Tagline */}
         <p
-          class="mt-4 dm-serif-display-regular-italic text-2xl animate-fadeUp"
-          style="--delay:0.2s; color:rgba(26,20,16,0.45);"
+          class="mt-4 dm-serif-display-regular-italic text-2xl animate-fadeUp text-(--text-color)"
+          style="--delay:0.2s;"
         >
           Digital menus for real restaurants.
         </p>
 
         {/* Description */}
         <p
-          class="mt-6 mx-auto max-w-xl jetbrains-mono text-base leading-relaxed animate-fadeUp"
-          style="--delay:0.3s; color:rgba(26,20,16,0.38);"
+          class="mt-6 mx-auto max-w-xl jetbrains-mono text-base leading-relaxed animate-fadeUp text-(--text-color)"
+          style="--delay:0.3s;"
         >
           QR code menus, live kitchen display, and daily sales reports — for
           small cafes and food stalls who can't afford $200/mo POS systems.
@@ -275,16 +223,10 @@ const Header = () => {
           class="animate-fadeUp inline-flex items-baseline gap-2"
           style="--delay:0.5s"
         >
-          <span
-            class="text-5xl font-bold dm-serif-display-regular"
-            style="color:#1a1410;"
-          >
+          <span class="text-5xl font-bold dm-serif-display-regular text-(--ink)">
             $25
           </span>
-          <span
-            class="jetbrains-mono text-sm tracking-wider"
-            style="color:rgba(26,20,16,0.35);"
-          >
+          <span class="jetbrains-mono text-sm tracking-wider text-(--text-color)">
             / month, flat. No surprises.
           </span>
         </div>
@@ -296,19 +238,8 @@ const Header = () => {
         >
           {["No credit card required", "Cancel anytime", "Easy setup"].map(
             (item) => (
-              <span
-                class="flex items-center gap-1.5 text-xs jetbrains-mono"
-                style="color:rgba(26,20,16,0.35);"
-              >
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M2 6l3 3 5-5"
-                    stroke="#e8780c"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+              <span class="flex items-center gap-1.5 text-xs jetbrains-mono text-(--text-color)">
+                <Check class="text-(--amber)" />
                 {item}
               </span>
             ),

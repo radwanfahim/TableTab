@@ -1,14 +1,12 @@
-const Badge = () => {
+const Badge = (props: { text: string; style?: string; spanStyle?: string }) => {
   return (
     <div
-      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-widest uppercase"
-      style="background:rgba(232,120,12,0.07); border:1px solid rgba(232,120,12,0.18); color:rgba(26,20,16,0.5);"
+      class={` items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-widest uppercase ${props.style || ""}`}
     >
       <span
-        class="w-1.5 h-1.5 rounded-full animate-pulse inline-block"
-        style="background:#e8780c;"
+        class={`w-1.5 h-1.5 rounded-full animate-pulse inline-block ${props.spanStyle || ""}`}
       />
-      Now open for early access
+      {props.text}
     </div>
   );
 };
