@@ -1,9 +1,11 @@
-import Header from "./Header";
+import Header from "./Header/Header";
+import HowItWorks from "./HowItWorks/HowItWorks";
 
 const Home = () => {
   return (
     <section>
       <Header />
+      <HowItWorks />
     </section>
   );
 };

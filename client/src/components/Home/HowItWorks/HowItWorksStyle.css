@@ -1,0 +1,89 @@
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes roamA {
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  25% {
+    transform: translate(12%, 8%) scale(1.12);
+  }
+  50% {
+    transform: translate(20%, -5%) scale(0.95);
+  }
+  75% {
+    transform: translate(5%, 15%) scale(1.08);
+  }
+}
+
+@keyframes roamB {
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  30% {
+    transform: translate(-14%, -10%) scale(1.15);
+  }
+  60% {
+    transform: translate(-6%, 12%) scale(0.9);
+  }
+  80% {
+    transform: translate(-20%, 5%) scale(1.05);
+  }
+}
+
+@keyframes roamC {
+  0%,
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 0.15;
+  }
+  40% {
+    transform: translate(-20%, 15%) scale(1.3);
+    opacity: 0.22;
+  }
+  70% {
+    transform: translate(18%, -12%) scale(0.8);
+    opacity: 0.1;
+  }
+}
+
+@keyframes scanlines {
+  0% {
+    background-position-y: 0px;
+  }
+  100% {
+    background-position-y: 40px;
+  }
+}
+
+/* embla__viewport */
+.embla {
+  --slide-size: 40%;
+  --slide-spacing: 10px;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}

@@ -1,13 +1,13 @@
-import Button from "../../ui/Button";
+import Button from "../../../ui/Button";
 import { Check, MoveRight } from "lucide-solid";
 import { For } from "solid-js";
-import Divider from "../../ui/Divider";
-import Badge from "../../ui/Badge";
-import "./Style.css";
-import FloatingRotatedSquareBottomLeft from "../../svg/FloatingRotatedSquareBottomLeft";
-import Diamond from "../../svg/Diamond";
-import SmallCircle from "../../svg/SmallCircle";
-import PlateForkKnife from "../../svg/PlateForkKnife";
+import Divider from "../../../ui/Divider";
+import Badge from "../../../ui/Badge";
+import "./HeaderStyle.css";
+import FloatingRotatedSquareBottomLeft from "../../../svg/FloatingRotatedSquareBottomLeft";
+import Diamond from "../../../svg/Diamond";
+import SmallCircle from "../../../svg/SmallCircle";
+import PlateForkKnife from "../../../svg/PlateForkKnife";
 
 const Header = () => {
   const btnData = {
@@ -74,7 +74,7 @@ const Header = () => {
         style="background: radial-gradient(circle, rgba(232,120,12,0.13) 0%, transparent 70%); filter:blur(50px); z-index:0;"
       />
 
-      {/* Floating triangle — top right */}
+      {/* PlateForkKnife — top right */}
       <div class="absolute top-16 right-24 shape-c shimmer" style="z-index:0;">
         <PlateForkKnife />
       </div>
