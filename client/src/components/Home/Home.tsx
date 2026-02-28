@@ -1,3 +1,4 @@
+import EverythingIncluded from "./EverythingIncluded/EverythingIncluded";
 import Header from "./Header/Header";
 import HowItWorks from "./HowItWorks/HowItWorks";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <section>
       <Header />
       <HowItWorks />
+      <EverythingIncluded />
     </section>
   );
 };

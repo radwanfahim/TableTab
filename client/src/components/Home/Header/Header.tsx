@@ -165,7 +165,7 @@ const Header = () => {
 
       {/* ── Content ── */}
       <div
-        class="relative container mx-auto max-w-5xl px-4 sm:px-6 text-center"
+        class="relative container mx-auto max-w-7xl px-4 sm:px-6 text-center"
         style="z-index:1;"
       >
         {/* ANCHOR Badge */}
@@ -216,7 +216,7 @@ const Header = () => {
           <For each={[btnData]}>{(btn) => <Button {...btn} />}</For>
         </div>
 
-        <Divider style="my-5 bg-(--amber)" />
+        <Divider style="my-5 bg-(--amber) w-[60%] block mx-auto" />
 
         {/* Pricing */}
         <div
@@ -236,7 +236,7 @@ const Header = () => {
           class="mt-4 flex justify-center gap-8 animate-fadeUp"
           style="--delay:0.6s"
         >
-          {["No credit card required", "Cancel anytime", "Easy setup"].map(
+          {["No tier gates", "Cancel anytime", "Easy setup"].map(
             (item) => (
               <span class="flex items-center gap-1.5 text-xs jetbrains-mono text-(--text-color)">
                 <Check class="text-(--amber)" />
